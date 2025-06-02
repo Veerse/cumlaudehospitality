@@ -1,0 +1,149 @@
+---
+const brand = {
+    name: "Cum Laude",
+    subtitle: "Hospitality",
+    description: "Creating exceptional hospitality experiences with uncompromising luxury and personalized service across our collection of distinguished properties."
+};
+
+const footerSections = [
+    {
+        title: "Company",
+        links: [
+            { name: "About Us", href: "#about" },
+            { name: "Our Story", href: "#story" },
+            { name: "Leadership", href: "#leadership" },
+            { name: "Careers", href: "#careers" },
+            { name: "Press", href: "#press" }
+        ]
+    },
+    {
+        title: "Properties",
+        links: [
+            { name: "All Hotels", href: "#properties" },
+            { name: "Luxury Suites", href: "#suites" },
+            { name: "City Hotels", href: "#city" },
+            { name: "Resort Properties", href: "#resorts" },
+            { name: "Coming Soon", href: "#upcoming" }
+        ]
+    },
+    {
+        title: "Services",
+        links: [
+            { name: "Concierge", href: "#concierge" },
+            { name: "Dining", href: "#dining" },
+            { name: "Spa & Wellness", href: "#spa" },
+            { name: "Events", href: "#events" },
+            { name: "Business Center", href: "#business" }
+        ]
+    }
+];
+
+const contactInfo = {
+    address: "123 Luxury Boulevard, Suite 500",
+    city: "New York, NY 10001",
+    phone: "+1 (555) 123-4567",
+    email: "info@cumlaude-hospitality.com"
+};
+
+const socialMedia = [
+    { name: "Instagram", href: "#instagram" },
+    { name: "Facebook", href: "#facebook" },
+    { name: "LinkedIn", href: "#linkedin" },
+    { name: "Twitter", href: "#twitter" }
+];
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-gray-900 text-white">
+    <!-- Main Footer Content -->
+    <div class="max-w-7xl mx-auto px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
+
+            <!-- Brand Section -->
+            <div class="lg:col-span-2">
+                <div class="mb-6">
+                    <div class="flex flex-col leading-tight">
+                        <span class="text-3xl font-semibold text-white tracking-tight">{brand.name}</span>
+                        <span class="text-sm font-normal text-gray-400 uppercase tracking-widest -mt-1">{brand.subtitle}</span>
+                    </div>
+                </div>
+                <p class="text-gray-300 leading-relaxed mb-8 max-w-md">
+                    {brand.description}
+                </p>
+
+                <!-- Contact Info -->
+                <div class="space-y-3">
+                    <div class="text-sm text-gray-300">
+                        <div>{contactInfo.address}</div>
+                        <div>{contactInfo.city}</div>
+                    </div>
+                    <div class="text-sm">
+                        <a href={`tel:${contactInfo.phone}`} class="text-yellow-400 hover:text-yellow-300 transition-colors duration-300">
+                            {contactInfo.phone}
+                        </a>
+                    </div>
+                    <div class="text-sm">
+                        <a href={`mailto:${contactInfo.email}`} class="text-yellow-400 hover:text-yellow-300 transition-colors duration-300">
+                            {contactInfo.email}
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Links Sections -->
+            {footerSections.map((section) => (
+                    <div class="lg:col-span-1">
+                        <h3 class="text-lg font-semibold text-white mb-6 tracking-wide">{section.title}</h3>
+                        <ul class="space-y-4">
+                            {section.links.map((link) => (
+                                    <li>
+                                        <a
+                                                href={link.href}
+                                                class="text-gray-300 hover:text-yellow-400 transition-colors duration-300 text-sm"
+                                        >
+                                            {link.name}
+                                        </a>
+                                    </li>
+                            ))}
+                        </ul>
+                    </div>
+            ))}
+        </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-8 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+
+                <!-- Copyright -->
+                <div class="text-sm text-gray-400">
+                    © {currentYear} {brand.name} {brand.subtitle}. All rights reserved.
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="flex items-center space-x-6">
+                    {socialMedia.map((social) => (
+                            <a
+                                    href={social.href}
+                                    class="text-gray-400 hover:text-yellow-400 transition-colors duration-300 text-sm font-medium"
+                            >
+                                {social.name}
+                            </a>
+                    ))}
+                </div>
+
+                <!-- Legal Links -->
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="#privacy" class="hover:text-yellow-400 transition-colors duration-300">
+                        Privacy Policy
+                    </a>
+                    <a href="#terms" class="hover:text-yellow-400 transition-colors duration-300">
+                        Terms of Service
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
