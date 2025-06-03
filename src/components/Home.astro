@@ -104,28 +104,28 @@ const testimonials = [
 </section>
 
 <!-- About Section -->
-<section id="about" class="py-20 bg-white">
+<section id="about" class="py-20 bg-white dark:bg-gray-900">
     <div class="max-w-7xl mx-auto px-6 sm:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-                <h2 class="text-4xl font-bold text-gray-900 mb-6">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-6">
                     Defining Excellence in
-                    <span class="text-yellow-600">Hospitality</span>
+                    <span class="text-yellow-600 dark:text-yellow-400">Hospitality</span>
                 </h2>
-                <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                <p class="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                     For over two decades, Cum Laude Hospitality has been synonymous with exceptional service
                     and unforgettable experiences. Our carefully curated collection of properties represents
                     the pinnacle of luxury accommodation.
                 </p>
-                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
                     From bustling city centers to serene coastal retreats, each property is designed to
                     offer a unique experience while maintaining our unwavering commitment to excellence.
                 </p>
                 <div class="grid grid-cols-2 gap-6">
                     {stats.slice(0, 2).map((stat) => (
                             <div class="text-center sm:text-left">
-                                <div class="text-4xl font-bold text-yellow-600 mb-2">{stat.number}</div>
-                                <div class="text-gray-600">{stat.label}</div>
+                                <div class="text-4xl font-bold text-yellow-600 dark:text-yellow-400 mb-2">{stat.number}</div>
+                                <div class="text-gray-600 dark:text-gray-400">{stat.label}</div>
                             </div>
                     ))}
                 </div>
@@ -136,7 +136,7 @@ const testimonials = [
                         alt="Luxury hotel lobby"
                         class="rounded-2xl shadow-2xl"
                 />
-                <div class="absolute -bottom-8 -left-8 bg-yellow-500 text-white p-6 rounded-xl shadow-xl max-w-xs">
+                <div class="absolute -bottom-8 -left-8 bg-yellow-500 dark:bg-yellow-600 text-white p-6 rounded-xl shadow-xl max-w-xs">
                     <p class="font-semibold text-lg mb-1">Award-Winning Service</p>
                     <p class="text-sm">Recognized globally for excellence in hospitality</p>
                 </div>
@@ -146,20 +146,20 @@ const testimonials = [
 </section>
 
 <!-- Properties Section -->
-<section id="properties" class="py-20 bg-gray-50">
+<section id="properties" class="py-20 bg-gray-50 dark:bg-gray-800">
     <div class="max-w-7xl mx-auto px-6 sm:px-8">
         <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
                 Our Distinguished Properties
             </h2>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
                 Each location offers a unique blend of local culture and world-class amenities
             </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {properties.map((property) => (
-                    <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl dark:shadow-gray-900/50 dark:hover:shadow-gray-900/75 transition-all duration-300">
                         <div class="aspect-w-16 aspect-h-12 overflow-hidden">
                             <img
                                     src={property.image}
@@ -170,7 +170,7 @@ const testimonials = [
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
                             <h3 class="text-2xl font-bold mb-2">{property.name}</h3>
-                            <p class="text-yellow-300 font-medium mb-2">{property.location}</p>
+                            <p class="text-yellow-300 dark:text-yellow-400 font-medium mb-2">{property.location}</p>
                             <p class="text-white/90">{property.description}</p>
                         </div>
                     </div>
@@ -178,7 +178,7 @@ const testimonials = [
         </div>
 
         <div class="text-center mt-12">
-            <a href="#" class="inline-flex items-center text-yellow-600 font-semibold hover:text-yellow-700 transition-colors">
+            <a href="#" class="inline-flex items-center text-yellow-600 dark:text-yellow-400 font-semibold hover:text-yellow-700 dark:hover:text-yellow-300 transition-colors">
                 View All Properties
                 <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -189,13 +189,13 @@ const testimonials = [
 </section>
 
 <!-- Services Section -->
-<section id="services" class="py-20 bg-white">
+<section id="services" class="py-20 bg-white dark:bg-gray-900">
     <div class="max-w-7xl mx-auto px-6 sm:px-8">
         <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
                 Exceptional Services
             </h2>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
                 Every aspect of your stay is carefully curated to ensure an unforgettable experience
             </p>
         </div>
@@ -203,11 +203,11 @@ const testimonials = [
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service) => (
                     <div class="text-center group">
-                        <div class="w-20 h-20 mx-auto mb-6 bg-yellow-100 rounded-2xl flex items-center justify-center text-4xl group-hover:bg-yellow-200 transition-colors duration-300">
+                        <div class="w-20 h-20 mx-auto mb-6 bg-yellow-100 dark:bg-yellow-900/30 rounded-2xl flex items-center justify-center text-4xl group-hover:bg-yellow-200 dark:group-hover:bg-yellow-900/50 transition-colors duration-300">
                             {service.icon}
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                        <p class="text-gray-600 leading-relaxed">{service.description}</p>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">{service.title}</h3>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">{service.description}</p>
                     </div>
             ))}
         </div>
@@ -229,20 +229,20 @@ const testimonials = [
 </section>
 
 <!-- Experience Section -->
-<section id="experience" class="py-20 bg-gray-50">
+<section id="experience" class="py-20 bg-gray-50 dark:bg-gray-800">
     <div class="max-w-7xl mx-auto px-6 sm:px-8">
         <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
                 Guest Experiences
             </h2>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
                 Don't just take our word for it - hear from our valued guests
             </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {testimonials.map((testimonial) => (
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg dark:shadow-gray-900/50">
                         <div class="flex mb-4">
                             {[...Array(5)].map((_, i) => (
                                     <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -250,10 +250,10 @@ const testimonials = [
                                     </svg>
                             ))}
                         </div>
-                        <p class="text-gray-600 mb-6 italic">"{testimonial.quote}"</p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6 italic">"{testimonial.quote}"</p>
                         <div>
-                            <p class="font-semibold text-gray-900">{testimonial.author}</p>
-                            <p class="text-sm text-gray-500">{testimonial.role}</p>
+                            <p class="font-semibold text-gray-900 dark:text-white">{testimonial.author}</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">{testimonial.role}</p>
                         </div>
                     </div>
             ))}
@@ -261,7 +261,6 @@ const testimonials = [
     </div>
 </section>
 
-<!-- CTA Section -->
 <!-- CTA Section -->
 <section id="contact" class="py-24 bg-gray-700 relative overflow-hidden">
     <div class="max-w-4xl mx-auto px-6 sm:px-8 text-center relative z-10">
