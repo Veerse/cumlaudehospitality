@@ -1,9 +1,8 @@
----
-import "../styles/global.css";
-import Layout from "../layouts/Layout.astro";
----
-<Layout title="Cum Laude Hospitality">
-	<div>
-		Hello world
-	</div>
-</Layout>
+	---
+	import "../styles/global.css";
+	import Layout from "../layouts/Layout.astro";
+	import Home from "../components/Home.astro";
+	---
+	<Layout title="Cum Laude Hospitality">
+		<Home/>
+	</Layout>
