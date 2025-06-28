@@ -1,22 +1,86 @@
 ---
-const properties = [
+const hotelReferences = [
     {
-        name: "The Metropolitan",
-        location: "New York City",
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
-        description: "Luxury urban retreat in the heart of Manhattan"
+        name: "Hôtel Prince de Galles",
+        location: "Paris, France",
+        image: "https://hospitality-on.com/sites/default/files/styles/image825xosef/public/import/contenu/arton11872.jpg.webp?itok=7ScUmOkg",
+        services: "Renovation Management & Operations",
+        category: "paris"
     },
     {
-        name: "Sunset Coast Resort",
-        location: "Malibu",
-        image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
-        description: "Beachfront paradise with breathtaking ocean views"
+        name: "Fouquet's Paris",
+        location: "Paris, France",
+        image: "https://a.storyblok.com/f/287000/1564x1044/b734a8423a/paris-fouquet-s-facade.jpg",
+        services: "Comprehensive Security Services",
+        category: "paris"
     },
     {
-        name: "Alpine Grand Lodge",
-        location: "Aspen",
-        image: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=800&q=80",
-        description: "Mountain elegance meets modern luxury"
+        name: "Hôtel Crayon Paris",
+        location: "Paris, France",
+        image: "https://hotelcrayon.com/_novaimg/4365091-1358152_0_242_2250_1226_2200_1200.rc.webp",
+        services: "Quality Assurance & Security Excellence",
+        category: "paris"
+    },
+    {
+        name: "Le Meurice",
+        location: "Paris, France",
+        image: "https://upload.wikimedia.org/wikipedia/commons/b/ba/H%C3%B4tel_Le_Meurice.jpg",
+        services: "Luxury Hotel Operations",
+        category: "paris"
+    },
+    {
+        name: "Regency Travel",
+        location: "San Diego, USA",
+        image: "https://www.kayak.com/rimg/himg/f0/84/cc/ice-31828-126345959-272627.jpg?width=1366&height=768&crop=true",
+        services: "Luxury Cruises & Hotel Reservations",
+        category: "california"
+    },
+    {
+        name: "Hôtel Mandarin Oriental Paris",
+        location: "Paris, France",
+        image: "https://assets.hotelaparis.com/uploads/pictures/000/014/004/1_mandarin_oriental_chambre7.jpg",
+        services: "International Standards Implementation",
+        category: "paris"
+    },
+    {
+        name: "Le Royal Monceau",
+        location: "Paris, France",
+        image: "https://m.ahstatic.com/is/image/accorhotels/aja_p_5971-42?qlt=82&wid=575&ts=1695296702670&dpr=on,2.625",
+        services: "Premium Guest Experience Design",
+        category: "paris"
+    },
+    {
+        name: "Cheval Blanc Courchevel",
+        location: "Courchevel, France",
+        image: "https://images.prismic.io/chevalblanc/0afde8a6ea74b011e787dd73f644b877ab20d14b_1.-cheval-blanc-courchevel-facade_cheval-blanc-courchevel-outdoor_t.-malty---copie.jpg?auto=compress,format",
+        services: "Alpine Luxury Management",
+        category: "international"
+    },
+    {
+        name: "The Peninsula Beverly Hills",
+        location: "Beverly Hills, USA",
+        image: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/8744314.jpg?k=ef72cf4d91e51e824bc412b34dabd89105e1dd177c12e37a759b4f50cdc25800&o=&hp=1",
+        services: "International Consulting",
+        category: "international"
+    }
+];
+
+const currentProjects = [
+    {
+        name: "Radisson Blu International",
+        location: "Benghazi, Libya",
+        image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=800&q=80",
+        role: "Hotel Implementation Supervisor",
+        services: "Strategic Consulting & Installation Oversight",
+        release: "End 2025"
+    },
+    {
+        name: "Ozo Benghazi",
+        location: "Benghazi, Libya",
+        image: "https://images.unsplash.com/photo-1678271686908-f76a0cb3bacf?w=800&q=80",
+        role: "Management & Hospitality Advisor",
+        services: "Operational Consulting & Development",
+        release: "Early 2026"
     }
 ];
 
@@ -44,7 +108,7 @@ const services = [
 ];
 
 const stats = [
-    { number: "10+", label: "Luxury Establishments" },
+    { number: "20+", label: "Luxury Establishments" },
     { number: "4+", label: "Countries operated" },
     { number: "28+", label: "Years of Excellence" },
     { number: "3", label: "Ongoing Projects" }
@@ -141,48 +205,98 @@ const stats = [
     </div>
 </section>
 
-<!-- Properties Section -->
-<section id="properties" class="py-20 bg-gray-50 dark:bg-gray-800">
-    <div class="max-w-7xl mx-auto px-6 sm:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                Our Distinguished Properties
-            </h2>
-            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                Each location offers a unique blend of local culture and world-class amenities
-            </p>
-        </div>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-50 dark:bg-gray-800 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8">
+            <div class="text-center mb-8">
+                <p class="text-sm text-yellow-600 dark:text-yellow-400 tracking-[0.3em] uppercase font-light mb-4">
+                    Our Portfolio
+                </p>
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                    Distinguished References & <span class="text-yellow-600 dark:text-yellow-400">Ongoing Projects</span>
+                </h2>
+                <div class="w-24 h-[1px] bg-yellow-400/60 mx-auto mt-6"></div>
+            </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {properties.map((property) => (
-                    <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl dark:shadow-gray-900/50 dark:hover:shadow-gray-900/75 transition-all duration-300">
-                        <div class="aspect-w-16 aspect-h-12 overflow-hidden">
-                            <img
-                                    src={property.image}
-                                    alt={property.name}
-                                    class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
-                            />
-                        </div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                            <h3 class="text-2xl font-bold mb-2">{property.name}</h3>
-                            <p class="text-yellow-300 dark:text-yellow-400 font-medium mb-2">{property.location}</p>
-                            <p class="text-white/90">{property.description}</p>
-                        </div>
+            <!-- Hotel References Carousel -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-8 text-center">
+                    Some of our Prestigious Hotel References
+                </h3>
+
+                <div class="relative">
+                    <div class="hotel-carousel flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide">
+                        {hotelReferences.map((hotel) => (
+                                <div class="hotel-card flex-none w-80 snap-center">
+                                    <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                                        <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+                                            <img
+                                                    src={hotel.image}
+                                                    alt={hotel.name}
+                                                    class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+                                            />
+                                        </div>
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                            <h4 class="text-xl font-bold mb-1">{hotel.name}</h4>
+                                            <p class="text-yellow-300 text-sm mb-2">{hotel.location}</p>
+                                            <p class="text-white/90 text-sm">{hotel.services}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                        ))}
                     </div>
-            ))}
-        </div>
 
-        <div class="text-center mt-12">
-            <a href="#" class="inline-flex items-center text-yellow-600 dark:text-yellow-400 font-semibold hover:text-yellow-700 dark:hover:text-yellow-300 transition-colors">
-                View All Properties
-                <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                </svg>
-            </a>
+                    <!-- Carousel Controls -->
+                    <button class="carousel-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white/90 dark:bg-gray-800/90 p-3 rounded-full shadow-lg hover:bg-white dark:hover:bg-gray-800 transition-colors duration-300">
+                        <svg class="w-5 h-5 text-gray-800 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+                    <button class="carousel-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white/90 dark:bg-gray-800/90 p-3 rounded-full shadow-lg hover:bg-white dark:hover:bg-gray-800 transition-colors duration-300">
+                        <svg class="w-5 h-5 text-gray-800 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Current Projects -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-8 text-center">
+                    Ongoing Projects
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {currentProjects.map((project) => (
+                            <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 bg-white dark:bg-gray-900">
+                                <div class="aspect-w-14 aspect-h-6 overflow-hidden">
+                                    <img
+                                        src={project.image}
+                                        alt={project.name}
+                                        class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                                    />
+                                </div>
+                                <div class="p-6">
+                                    <div class="flex items-start justify-between mb-3">
+                                        <h4 class="text-xl font-bold text-gray-900 dark:text-white">
+                                            {project.name}
+                                        </h4>
+                                        <span class="px-2 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 text-xs font-medium rounded-full">
+                                            {project.release}
+                                        </span>
+                                    </div>
+                                    <p class="text-yellow-600 dark:text-yellow-400 text-sm mb-2">{project.location}</p>
+                                    <p class="text-gray-700 dark:text-gray-300 font-medium mb-2">{project.role}</p>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">{project.services}</p>
+                                </div>
+                            </div>
+                    ))}
+                </div>
+
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <!-- Services Section -->
 <section id="services" class="py-20 bg-white dark:bg-gray-900">
@@ -294,4 +408,93 @@ const stats = [
     #home > div:nth-child(2) > div {
         animation: fadeInUp 1.5s ease-out;
     }
+
+    /* Hide scrollbar but keep functionality */
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Smooth scroll behavior */
+    .hotel-carousel {
+        scroll-behavior: smooth;
+    }
+
+    /* Ensure aspect ratio */
+    .aspect-w-16 {
+        position: relative;
+        padding-bottom: 75%;
+    }
+
+    .aspect-w-16 > img {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    /* Add smooth animations */
+    @keyframes shimmer {
+        0% { background-position: -200% center; }
+        100% { background-position: 200% center; }
+    }
+
+    .animate-shimmer {
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+        background-size: 200% 100%;
+        animation: shimmer 3s infinite;
+    }
+
+    /* Premium hover effects */
+    .group:hover .group-hover\:scale-150 {
+        transform: scale(1.5);
+    }
+
+    /* Smooth transitions for all interactive elements */
+    * {
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
 </style>
+
+<script>
+    // Carousel functionality
+    document.addEventListener('DOMContentLoaded', () => {
+        const carousel = document.querySelector('.hotel-carousel');
+        const prevBtn = document.querySelector('.carousel-prev');
+        const nextBtn = document.querySelector('.carousel-next');
+
+        if (carousel && prevBtn && nextBtn) {
+            const scrollAmount = 320; // Width of one card plus gap
+
+            prevBtn.addEventListener('click', () => {
+                carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+
+            nextBtn.addEventListener('click', () => {
+                carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+
+            // Update button visibility based on scroll position
+            const updateButtons = () => {
+                const isAtStart = carousel.scrollLeft === 0;
+                const isAtEnd = carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1;
+
+                prevBtn.style.opacity = isAtStart ? '0.5' : '1';
+                nextBtn.style.opacity = isAtEnd ? '0.5' : '1';
+                prevBtn.style.pointerEvents = isAtStart ? 'none' : 'auto';
+                nextBtn.style.pointerEvents = isAtEnd ? 'none' : 'auto';
+            };
+
+            carousel.addEventListener('scroll', updateButtons);
+            updateButtons();
+        }
+    });
+</script>
