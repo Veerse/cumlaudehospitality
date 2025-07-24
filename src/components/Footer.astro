@@ -71,7 +71,7 @@ const currentYear = new Date().getFullYear();
 
                 <!-- Contact Info -->
                 <div class="space-y-3">
-                    <div class="text-sm text-red-400">
+                    <div class="text-sm text-amber-400">
                         <div>{contactInfo.denomination}</div>
                     </div>
                     <div class="text-sm text-gray-300">
@@ -79,12 +79,12 @@ const currentYear = new Date().getFullYear();
                         <div>{contactInfo.city}</div>
                     </div>
                     <div class="text-sm">
-                        <a href={`tel:${contactInfo.phone}`} class="text-red-400 hover:text-red-300 transition-colors duration-300">
+                        <a href={`tel:${contactInfo.phone}`} class="text-amber-400 hover:text-amber-300 transition-colors duration-300">
                             {contactInfo.phone}
                         </a>
                     </div>
                     <div class="text-sm">
-                        <a href={`mailto:${contactInfo.email}`} class="text-red-400 hover:text-red-300 transition-colors duration-300">
+                        <a href={`mailto:${contactInfo.email}`} class="text-amber-400 hover:text-amber-300 transition-colors duration-300">
                             {contactInfo.email}
                         </a>
                     </div>
@@ -100,7 +100,7 @@ const currentYear = new Date().getFullYear();
                                     <li>
                                         <a
                                                 href={link.href}
-                                                class="text-gray-300 hover:text-red-400 transition-colors duration-300 text-sm"
+                                                class="text-gray-300 hover:text-amber-400 transition-colors duration-300 text-sm"
                                         >
                                             {link.name}
                                         </a>
@@ -127,7 +127,7 @@ const currentYear = new Date().getFullYear();
                     {socialMedia.map((social) => (
                             <a
                                     href={social.href}
-                                    class="text-gray-400 hover:text-red-400 transition-colors duration-300 text-sm font-medium"
+                                    class="text-gray-400 hover:text-amber-400 transition-colors duration-300 text-sm font-medium"
                             >
                                 {social.name}
                             </a>
@@ -136,10 +136,10 @@ const currentYear = new Date().getFullYear();
 
                 <!-- Legal Links -->
                 <div class="flex items-center space-x-6 text-sm text-gray-400">
-                    <a href="#privacy" class="hover:text-red-400 transition-colors duration-300">
+                    <a href="#privacy" class="hover:text-amber-400 transition-colors duration-300">
                         Privacy Policy
                     </a>
-                    <a href="#terms" class="hover:text-red-400 transition-colors duration-300">
+                    <a href="#terms" class="hover:text-amber-400 transition-colors duration-300">
                         Terms of Service
                     </a>
                 </div>
